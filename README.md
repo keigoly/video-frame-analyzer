@@ -22,6 +22,32 @@ An MCP (Model Context Protocol) server that extracts key frames from short video
 
 ## Installation / インストール
 
+### Claude Code CLI (Recommended / 推奨)
+
+The simplest way to install. Run the following command in your terminal:
+
+最も簡単な方法です。ターミナルで以下のコマンドを実行してください:
+
+```bash
+claude mcp add video-frame-analyzer -- npx -y video-frame-analyzer
+```
+
+This registers the MCP server with Claude Code. No manual configuration needed.
+
+これだけでClaude CodeにMCPサーバーが登録されます。手動の設定ファイル編集は不要です。
+
+### npx (Direct execution / 直接実行)
+
+You can also run it directly without installation:
+
+インストールなしで直接実行することもできます:
+
+```bash
+npx -y video-frame-analyzer
+```
+
+### Manual installation / 手動インストール
+
 ```bash
 git clone https://github.com/keigoly/video-frame-analyzer.git
 cd video-frame-analyzer
@@ -29,11 +55,9 @@ npm install
 npm run build
 ```
 
-## MCP Configuration / MCP設定
+If you installed manually, add the following to your `.mcp.json` (project-level) or `~/.claude/settings.json` (global):
 
-Add to your `.mcp.json` (project-level) or `~/.claude/settings.json` (global):
-
-プロジェクトの `.mcp.json` またはグローバルの `~/.claude/settings.json` に追加:
+手動インストールの場合、プロジェクトの `.mcp.json` またはグローバルの `~/.claude/settings.json` に以下を追加してください:
 
 ```json
 {
